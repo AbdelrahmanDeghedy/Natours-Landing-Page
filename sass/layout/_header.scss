@@ -1,0 +1,29 @@
+.header {
+  height: 95vh; /*95% of the viewport height*/
+  background-size: cover; /*to fit the element in the screen entirly*/
+  background-image: linear-gradient(to right bottom, $color-optional, rgba(40, 180, 131, 0.8)), url('../img/hero.jpg'); /*background image can take two values, gradient and the image, those will be on top of each other (first gradient, then the picture). Multiple values in CSS are separated by a comma*/
+  /*gradient takes 3 parameters (direction of the gradient, first color, second color)
+  background-position: top; /*to make the top of the page stays the same when we resize the page, and the rest of the page will be shrinked*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*clockwise polygon, we insert coordinates, starting from the top left of the element*/
+  position: relative; /* to make it the parent of the logo-box*/
+  /* relative without a top and a left values, will change nothing in terms of the view, but the advantage is that it will make this element as a reference */
+  &__logo-box {
+    position: absolute;
+    top : 4rem;
+    left : 4rem;
+  }
+  &__logo {
+    height: 3.5rem; /*Change the height only, and width will scale automatically, or perform the opposite*/
+  }
+  &__logo:hover {
+    animation: rotation 0.75s ease-out;   /*shorthand for: animation name, animation duaration, animation timing function*/
+  }
+  &__text-box {
+    position: absolute;
+    top : 40%;
+    left : 50%; /* those will center the beggining of the box, with the background, but we want the *center* of the box to be centered, not the beggining of the box*/
+    transform: translate(-50%, -50%); /*shifts the element relative to itself, to fix the previous problem*/
+    text-align: center; /*to center the text inside it (i.e, the anchor button), this is much easier than the trasnlate*/
+    /*inline-block elements can be centered using texxt-align: enter, as they're treated as text*/
+  }
+}

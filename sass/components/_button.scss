@@ -1,0 +1,87 @@
+
+.btn {
+  &, &:link, &:visited {
+    text-transform: uppercase;
+    text-decoration: none; /*to remove the default decoration (links by default are blue, and are underlined*/
+    padding: 1.5rem 4rem;
+    display: inline-block;  /*inline-blocks is treated as a box*/
+    border-radius: 10rem; /*any high number*/
+    transition: all .2s; /*second way of adding an animation, this will add timing for the specified animation in the argument, which is (all) refer to all animation transition properties (like: transform)*/
+    position: relative;
+
+    // change for the <button> element
+    border : none;
+    cursor: pointer;
+  }
+  &:hover {
+    transform : translateY(-0.3rem);
+    /*(shadow offset in x-direction, shadow offset in y-dir, blur, color)*/
+    box-shadow : 0 10px 20px rgba(0, 0, 0, 0.2); /*rgb (0, 0, 0) is black*/
+    &::after {
+      /* it will scale up, then gets hidden*/
+      transform : scaleX(1.4) scaleY(1.6);  /*make the pseudo element 1.5 times the original element, while hovering over*/
+      opacity : 0;
+    }
+  }
+  &:active {
+    transform : translateY(-0.1rem);
+    box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2); /*reduce the shadow, when clicking*/
+  }
+  &--white {
+    background-color : white;
+    color : #777;
+    &::after {
+        background-color : white;
+        color : #777;
+      }
+  }
+  &--green {
+    background-color : $color-primary;
+    color : $color-white;
+    &::after {
+        background-color : $color-primary;
+        color : $color-white;
+      }
+  }
+  &::after {
+    /* This adds a new virtual btn behind the current button, and when we move the current button, we will see the virtual one*/
+    /* we must add content property, even if you left it empty*/
+    content: "";
+    /*then, we should add the exact same properties of the initial button*/
+    display : inline-block;
+    height : 100%;
+    width: 100%;
+    border-radius : 10rem;
+    position : absolute; /*go change the position of button to relative, to make the button as a reference for the current element*/
+    /*we change button to relative, and not absolute, as relative won't change anything, without changing top, left. Unlike absolute*/
+    top : 0;
+    left : 0;
+    z-index : -1;  /*behind the button definately*/
+    transition: all 0.4s; /*we put the trasition property, in the initial state, because the initial state is accessed without any effort from the user, it will be accessed, just after loading the page*/
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all .2s;
+  }
+  &:hover {
+    background-color: $color-primary;
+    color:$color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    transform: translateY(-2px);
+
+  }
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    transform: translateY(0px);
+
+  }
+}

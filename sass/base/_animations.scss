@@ -1,0 +1,44 @@
+
+@keyframes moveInLeft {
+ /*we describe each moment of time, using percentages*/
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);  /*translate x, moves the element in the x direction only*/
+    transform: rotate(-180deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(1rem);  /*to move the element slightly to the right*/
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform: translateX(0);  /*to return to initial state*/
+
+  }
+}
+@keyframes moveInRight {
+ /*we describe each moment of time, described by percentages*/
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);  /*translate x, moves the element in the x direction only*/
+    transform: rotate(-180deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform : rotate(360deg);
+  }
+  100% {
+    transform : rotate(0deg);
+  }
+}

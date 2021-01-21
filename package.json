@@ -1,0 +1,14 @@
+{
+  "name": "naturus",
+  "version": "1.0.0",
+  "description": "LAnding page for naturus.",
+  "main": "index.js",
+  "scripts": {
+      "compile:sass" : "node-sass sass/main.scss css/style.css -w" 
+  },
+  "author": "Abdelrahman",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

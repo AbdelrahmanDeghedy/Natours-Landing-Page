@@ -1,0 +1,17 @@
+*,
+*::after, /*pseudo elements (not real elements), so they're not selected by the normal universal selector*/
+*::before{ /* basic reset, to initialize some values for all the elements, in order to start clean */
+  margin : 0; /* default is auto */
+  padding : 0;
+  box-sizing: inherit; /*box-sizing property is not inherited by default, but we force the inheretance by writing the inherit keyword*/
+}
+
+html {
+  /*this defines what 1rem is*/
+  /*root font is in the html selector*/
+  /* font-size: 10px;  /* we made it 10px to make our life easier, 1 rem = 10px */
+  font-size: 62.5%; /*62.5% of 16px is 10px and percentage is better*/
+}
+body {
+  box-sizing: border-box; /*padding and border are not added to the total width and height specified for the box*/
+}
