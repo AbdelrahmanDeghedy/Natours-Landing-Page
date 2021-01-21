@@ -1,5 +1,6 @@
 # Natours-Project
-Virtual website, for learning purposes.
+A native website created from scratch, without any framework. It contains a lot of interactive UI elements to enhance the user experience.      </p>
+
 
 ### Technologies used:
 
