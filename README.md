@@ -1,6 +1,8 @@
 # Natours-Project
-A native website created from scratch, without any framework. It contains a lot of interactive UI elements to enhance the user experience.      </p>
 
+
+- Natours is a fictitious website of a nature tours agency. The website contains a ton of new CSS features to make the website more modern.
+- I followed the BEM methodology to make the code more readable and easier to maintain.
 
 ### Technologies used:
 
