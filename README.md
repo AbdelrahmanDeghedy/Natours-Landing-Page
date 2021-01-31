@@ -6,6 +6,8 @@ A native website created from scratch, without any framework. It contains a lot 
 
 HTML, CSS, SASS. With BEM Methology. I also used some NPM packages.
 
+### Screenshots from the Website
+
 
 ![1](https://user-images.githubusercontent.com/68364202/106394682-788cb200-6406-11eb-90f3-fc3bc370123c.png)
 ![2](https://user-images.githubusercontent.com/68364202/106394695-86423780-6406-11eb-82d0-504aa6c3992c.png)
