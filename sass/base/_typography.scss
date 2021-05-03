@@ -48,7 +48,7 @@ body { /*parent of all elements*/
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     display: inline-block;
     color:transparent;  // make the text invisible
-    background-clip : text;  //to see the text that is on the top of the background-image, and clips everthing else
+    -webkit-background-clip : text;  //to see the text that is on the top of the background-image, and clips everthing else
     letter-spacing: 2px;  //it's too small, so no need to convert it to rems
     transition: all .2s;
 
