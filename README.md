@@ -1,8 +1,13 @@
 # Natours-Project
 
 
-- Natours is a fictitious website of a nature tours agency. The website contains a ton of new CSS features to make the website more modern.
+- A landing page for a fictionous nature tours agency. The website contains a ton of new CSS features to make the website more modern.
 - I followed the BEM methodology to make the code more readable and easier to maintain.
+
+#### View the live version of the website from here:
+
+https://natours-landing-page-ten.vercel.app/
+
 
 ### Technologies used:
 
